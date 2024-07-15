@@ -3,7 +3,6 @@ import torch.nn as nn
 import numpy as np
 import torchvision
 from PIL import Image
-from render_aniso import render_mid
 from render import Microfacet
 device='cuda'
 eps = 1e-6
