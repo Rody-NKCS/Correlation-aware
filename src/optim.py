@@ -7,8 +7,8 @@ from PIL import Image
 from src.util import *
 import random
 sys.path.append("src/") 
-from models.network_skip import Encoder_GCN, Encoder 
-from models.network_skip import Decoder
+from models.network import Encoder_GCN, Encoder 
+from models.network import Decoder
 from src.Losses import render_loss
 from render import tex2png
 
