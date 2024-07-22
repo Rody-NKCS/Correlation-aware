@@ -44,7 +44,7 @@ def optim(args):
     enc_blks = [2, 2, 4, 8]
     middle_blk_num = 12
     dec_blks = [2, 2, 2, 2]
-   
+    args.out_path = args.out_path + str(args.N)
     criterion = nn.MSELoss().to(device)
     
     for name in os.listdir(args.path):
@@ -64,7 +64,6 @@ def optim(args):
       
         opt_path = os.path.join(args.path,name)
         args.light_pos, args.camera_pos, args.image_size, args.light = loadLightAndCamera(opt_path)
-        args.out_path = args.out_path + str(args.N)
         out_opt_path = os.path.join(args.out_path,name)
         
         if not os.path.exists(out_opt_path):
