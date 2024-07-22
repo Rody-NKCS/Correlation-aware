@@ -64,6 +64,7 @@ def optim(args):
       
         opt_path = os.path.join(args.path,name)
         args.light_pos, args.camera_pos, args.image_size, args.light = loadLightAndCamera(opt_path)
+        args.out_path = args.out_path + str(args.N)
         out_opt_path = os.path.join(args.out_path,name)
         
         if not os.path.exists(out_opt_path):
