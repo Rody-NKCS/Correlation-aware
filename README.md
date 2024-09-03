@@ -9,6 +9,7 @@ This is the code of "Correlation-aware Encoder-Decoder with Adapters for SVBRDF 
 ## Inference
 Before running, please download:
 1. Our pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1BebohTKZfpVQ6bPiT7AYh930pBAnZSWW?usp=sharing). Download them and extract them into `./ckpt/`.
+2. Dataset. The input images can be rendered from synthetic dataset (such as [here](https://github.com/valentin-deschaintre/Single-Image-SVBRDF-Capture-rendering-loss)) or captured (such as [here](https://github.com/tflsguoyu/svbrdf-diff-renderer)).
 
 ### Inference on multi-image
 Please use this command:
