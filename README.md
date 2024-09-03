@@ -12,7 +12,15 @@ Before running, please download:
 2. Dataset. The input images can be rendered from [synthetic dataset](https://github.com/valentin-deschaintre/Single-Image-SVBRDF-Capture-rendering-loss) or [captured](https://github.com/tflsguoyu/svbrdf-diff-renderer).
    The input images should be organized in the following format:
    ```
-
+   ./data/wood/
+   |—— 0.png
+   |—— 1.png
+   |—— 2.png
+   |—— ...
+   |—— camera_pos.txt
+   |—— light_pos.txt
+   |—— image_size.txt
+   |—— light_power.txt
    ```
 
 ### Inference on multi-image
@@ -25,7 +33,7 @@ python script_test.py
   --epochs 10 # Iterations of the latent space optimization
   --sec_epochs 500 # Iterations of fine-tuning of adapters
 ```
-## Inference on single image
+### Inference on single image
 Please use this command:
 ```
 python script_test.py
