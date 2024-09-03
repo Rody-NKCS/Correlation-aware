@@ -4,7 +4,7 @@ This is the code of "Correlation-aware Encoder-Decoder with Adapters for SVBRDF 
 
 ## Dependencies
 - Python (with pillow, numpy; tested on Python 3.9)
-- Pytorch (tested on 2.1.1 +  CUDA 12.4)
+- Pytorch (tested on 2.1.1 +  CUDA 12.1)
 
 ## Inference
 Before running, please download:
