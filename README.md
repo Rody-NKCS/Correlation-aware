@@ -20,5 +20,23 @@ python script_test.py
   --epochs 10 # Iterations of the latent space optimization
   --sec_epochs 500 # Iterations of fine-tuning of adapters
 ```
-
 ## Inference on single image
+Please use this command:
+```
+python script_test.py
+  --N 1 # Number of input images
+  --path "data/"  # Path of input images
+  --out_path "outputs" # Output path of the results
+  --epochs 10 # Iterations of the latent space optimization
+  --sec_epochs 500 # Iterations of fine-tuning of adapters
+```
+
+## Citation
+
+If you find this work useful for your research, please cite:
+
+
+
+## Contact
+
+This code is not clean version, will clean it up soon. feel free to email me if you have any questions: Rody1911641ng@gmail.com. Thanks for your understanding!
