@@ -1,10 +1,24 @@
 # Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition
-This is the code of "Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition". [Project](https://rody-nkcs.github.io/SVBRDF/) | [Paper]().
+This is the code of "Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition" (Proceedings of SIGGRAPH Asia 2024). [Project](https://rody-nkcs.github.io/SVBRDF/) | [Paper]().
 <img src='teaser.png'>
 
-# Dependencies
+## Dependencies
 - Python (with pillow, numpy; tested on Python 3.9)
 - Pytorch (tested on 2.1.1 +  CUDA 12.4)
 
-# Pretrained models
-Our pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1BebohTKZfpVQ6bPiT7AYh930pBAnZSWW?usp=sharing). Download them and extract them into `./ckpt/`.
+## Inference
+Before running, please download:
+1. Our pretrained models can be downloaded from [here](https://drive.google.com/drive/folders/1BebohTKZfpVQ6bPiT7AYh930pBAnZSWW?usp=sharing). Download them and extract them into `./ckpt/`.
+
+### Inference on multi-image
+Please use this command:
+```
+python script_test.py
+  --N 4 # Number of input images
+  --path "data/"  # Path of input images
+  --out_path "outputs" # Output path of the results
+  --epochs 10 # Iterations of the latent space optimization
+  --sec_epochs 500 # Iterations of fine-tuning of adapters
+```
+
+## Inference on single image
