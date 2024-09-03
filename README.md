@@ -52,4 +52,4 @@ If you find this work useful for your research, please cite:
 
 ## Contact
 
-This code is not clean version, will clean it up soon. feel free to email me if you have any questions: Rody1911641@gmail.com. Thanks for your understanding!
+Feel free to email me if you have any questions: Rody1911641@gmail.com. 
