@@ -51,8 +51,8 @@ If you find this work useful for your research, please cite:
 @inproceedings{Luo:2024:Correlation-aware,
   title={Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition},
   author={Di Luo and Hanxiao Sun and Lei Ma and Jian Yang and Beibei Wang},
-  booktitle ={Proceedings of SIGGRAPH Asia 2024},
-  year = {2024},
+  booktitle={Proceedings of SIGGRAPH Asia 2024},
+  year={2024},
 }
 ```
 
