@@ -44,22 +44,23 @@ def optim(args):
     enc_blks = [2, 2, 4, 8]
     middle_blk_num = 12
     dec_blks = [2, 2, 2, 2]
-    args.out_path = args.out_path + str(args.N)
+   
     criterion = nn.MSELoss().to(device)
+    args.out_path = args.out_path + str(args.N)
     
     for name in os.listdir(args.path):
         print(name)
         if args.N >= 4:
             enc = Encoder_GCN(img_channel=img_channel, width=width, enc_blk_nums=enc_blks).to(device)
-            enc.load_state_dict( {k.replace('module.',''):v for k,v in torch.load('ckpt/skip_four/res_100_enc_4_60.ckpt',map_location='cuda:0').items()})
+            enc.load_state_dict( {k.replace('module.',''):v for k,v in torch.load('ckpt/enc_4.ckpt',map_location='cuda:0').items()})
             dec = Decoder(img_channel=img_channel, width=width, middle_blk_num=middle_blk_num, enc_blk_nums=enc_blks, dec_blk_nums=dec_blks).to(device)
-            dec.load_state_dict({k.replace('module.',''):v for k,v in torch.load('ckpt/skip_four/res_100_dec_4_60.ckpt',map_location='cuda:0').items()})
+            dec.load_state_dict({k.replace('module.',''):v for k,v in torch.load('ckpt/dec_4.ckpt',map_location='cuda:0').items()})
             
         else:
             enc = Encoder(img_channel=img_channel, width=width, enc_blk_nums=enc_blks).to(device)
-            enc.load_state_dict( {k.replace('module.',''):v for k,v in torch.load('ckpt/skip_one/res_50_enc_40.ckpt',map_location='cuda:0').items()})
+            enc.load_state_dict( {k.replace('module.',''):v for k,v in torch.load('ckpt/enc_1.ckpt',map_location='cuda:0').items()})
             dec = Decoder(img_channel=img_channel, width=width, middle_blk_num=middle_blk_num, enc_blk_nums=enc_blks, dec_blk_nums=dec_blks).to(device)
-            dec.load_state_dict({k.replace('module.',''):v for k,v in torch.load('ckpt/skip_one/res_50_dec_40.ckpt',map_location='cuda:0').items()})
+            dec.load_state_dict({k.replace('module.',''):v for k,v in torch.load('ckpt/dec_1.ckpt',map_location='cuda:0').items()})
             args.lr = 0.0001
       
         opt_path = os.path.join(args.path,name)
