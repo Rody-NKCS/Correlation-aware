@@ -29,7 +29,7 @@ Please use this command:
 python script_test.py
   --N 4 # Number of input images
   --path "data/"  # Path of input images
-  --out_path "outputs4" # Output path of the results
+  --out_path "outputs" # Output path of the results
   --epochs 10 # Iterations of the latent space optimization
   --sec_epochs 500 # Iterations of fine-tuning of adapters
 ```
@@ -39,7 +39,7 @@ Please use this command:
 python script_test.py
   --N 1 # Number of input images
   --path "data/"  # Path of input images
-  --out_path "outputs1" # Output path of the results
+  --out_path "outputs" # Output path of the results
   --epochs 10 # Iterations of the latent space optimization
   --sec_epochs 500 # Iterations of fine-tuning of adapters
 ```
@@ -47,7 +47,14 @@ python script_test.py
 ## Citation
 
 If you find this work useful for your research, please cite:
-
+```
+@inproceedings{Luo:2024:Correlation-aware,
+  title={Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition},
+  author={Di Luo and Hanxiao Sun and Lei Ma and Jian Yang and Beibei Wang},
+  booktitle ={Proceedings of SIGGRAPH Asia 2024},
+  year = {2024},
+}
+```
 
 
 ## Contact
