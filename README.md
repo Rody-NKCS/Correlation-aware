@@ -1,5 +1,5 @@
 # Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition
-This is the code of "Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition" (Proceedings of SIGGRAPH Asia 2024). [Project](https://rody-nkcs.github.io/SVBRDF/) | [Paper]().
+This is the code of "Correlation-aware Encoder-Decoder with Adapters for SVBRDF Acquisition" (Proceedings of SIGGRAPH Asia 2024). [Project](https://rody-nkcs.github.io/SVBRDF/) | [Paper](https://rody-nkcs.github.io/SVBRDF/paper/SigA-2024.pdf).
 <img src='teaser.png'>
 
 ## Dependencies
